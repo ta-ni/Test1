@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = env => {
     return {
@@ -25,6 +26,21 @@ module.exports = env => {
                         cacheDirectory: true,
                     },
                 },
+                {
+                    test: /\.scss$/,
+                    loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+                },
+                {
+                    test: /\.(jpe?g|png|gif|svg)$/i,
+                    loaders: [
+                        'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+                        'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                    ]
+                },
+                {
+                    test: /\.(eot|svg|ttf|woff|woff2)$/,
+                    loader: 'file?name=public/fonts/[name].[ext]'
+                }
             ],
         },
 
