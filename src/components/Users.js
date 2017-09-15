@@ -11,7 +11,7 @@ class Users extends React.Component {
 
     componentWillMount() {
         let count = 0,
-            maxCount = 2,
+            maxCount = 100,
             usersArray = [];
 
         let setAllUsers = (count, maxCount) => {
