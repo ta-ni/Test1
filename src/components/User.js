@@ -49,11 +49,11 @@ class User extends React.Component {
                     <div className="user__title">{user.login}</div>
                     <a href={`https://github.com/${user.login}/following`} className="user__text">follow me</a>
                     <p className="user__text">{user.created_at}</p>
-                    <p className="user__text">{`company: ${user.company}`}</p>
-                    <p className="user__text">{`email: ${user.email}`}</p>
-                    <p className="user__text">{user.location}</p>
-                    <p className="user__text">{`blog: ${user.blog}`}</p>
-                    <p className="user__text">{user.bio}</p>
+                    {user.company && <p className="user__text">{`company: ${user.company}`}</p>}
+                    {user.email && <p className="user__text">{`email: ${user.email}`}</p>}
+                    {user.location && <p className="user__text">{user.location}</p>}
+                    {user.blog && <p className="user__text">{`blog: ${user.blog}`}</p>}
+                    {user.bio && <p className="user__text">{user.bio}</p>}
                 </div>
                 {followers && followers.map((follower) =>
                     <div className="user__follower-block" key={follower.login}>

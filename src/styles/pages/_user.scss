@@ -32,7 +32,7 @@
 
 .user__text {
   @extend %link;
-  display: inline-block;
+  display: block;
   font-size: $main-font-size;
   margin: 10px 0;
   color: $extra-color;
