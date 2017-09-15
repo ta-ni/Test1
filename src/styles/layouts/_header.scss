@@ -1,0 +1,16 @@
+.header {
+  height: 60px;
+  border-bottom: $extra-border;
+}
+
+.header__nav-menu {
+  float: right;
+  margin-top: 20px;
+}
+
+.header__nav-link {
+  @extend %main-link;
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-size: 18px;
+}

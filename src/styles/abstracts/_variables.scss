@@ -1,0 +1,45 @@
+/* -----------------
+         colors
+-------------------- */
+
+$main-color: #11c4da;
+$extra-color: #4c4e53;
+
+$avatar-text-color: #b7b7b7;
+$white-color: #fff;
+$black-color: #000;
+
+$text-color: $extra-color;
+$hover-color: $main-color;
+
+/* ------------------
+         elements
+-------------------- */
+
+$main-border: 2px solid $main-color;
+$extra-border: 1px solid $extra-color;
+
+/* -----------------
+         fonts
+-------------------- */
+
+$main-font-size: 18px;
+
+$large-font-size: 30px;
+$middle-font-size: 24px;
+$small-font-size: 14px;
+$extra-smal-font-size: 12px;
+
+/* --------------------
+       z-index
+---------------------*/
+$avatar-name-index: 2;
+
+
+/* --------------------
+       screens
+---------------------*/
+$small-screens: 479px;
+$middle-screens: 768px;
+$large-screens: 993px;
+

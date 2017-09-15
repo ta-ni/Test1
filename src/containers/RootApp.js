@@ -1,17 +1,17 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import About from '../components/About';
-import Core from '../components/Core';
+import Header from '../components/Header';
 import Home from '../components/Home';
 import Users from '../components/Users';
+import User from '../components/User';
 
 const RootApp = () =>
     <Router>
         <div>
-            <Core/>
+            <Header/>
             <Switch>
                 <Route path="/" exact component={Home}/>
-                <Route path="/about" component={About}/>
+                <Route path="/users/:username" component={User} location={location}/>
                 <Route path="/users" component={Users}/>
             </Switch>
         </div>

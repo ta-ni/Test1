@@ -1,0 +1,63 @@
+%link {
+  text-decoration: none;
+
+}
+
+%main-link {
+  @extend %link;
+  color: $text-color;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+%title {
+  color: $main-color;
+  text-transform: uppercase;
+  font-size: $large-font-size;
+  margin: 40px auto 60px;
+  display: inline-block;
+  border-bottom: $main-border;
+}
+
+%image {
+  width: 100%;
+}
+
+%image__wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
+
+%image__content {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  margin: auto;
+  max-width: 100%;
+
+  border-radius: 50%;
+}
+
+%item-block {
+  margin: 0 auto 30px;
+  display: inline-block;
+  width: 80%;
+
+  @media screen and (min-width: $small-screens) {
+    width: 45%;
+    margin: 0 2% 30px;
+  }
+
+  @media screen and (min-width: $middle-screens) {
+    width: 20%;
+    margin: 0 1% 30px;
+  }
+}

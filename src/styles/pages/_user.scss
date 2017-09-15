@@ -1,0 +1,39 @@
+.user {
+  padding: 40px 0;
+}
+
+.user__title {
+  font-size: $middle-font-size;
+  margin: 20px 0;
+  color: $main-color;
+}
+
+.user__follower-block {
+  @extend %item-block;
+}
+
+.user__avatar {
+  @extend %image;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.user__avatar-wrapper {
+  @extend %image__wrapper;
+}
+
+.user__avatar-content {
+  @extend %image__content;
+}
+
+.user__about {
+  margin: 40px auto;
+}
+
+.user__text {
+  @extend %link;
+  display: inline-block;
+  font-size: $main-font-size;
+  margin: 10px 0;
+  color: $extra-color;
+}

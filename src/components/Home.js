@@ -1,33 +1,12 @@
 import React from 'react';
-import {setVisibilityFilter} from '../actions/index';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import image from '../images/product1.png'
 
+const Home = () => {
 
-class Home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        this.props.dispatch(setVisibilityFilter(!this.props.todo));
-    }
-
-    render() {
-        return <div>
-            {this.props.todo && <p>ololo</p>}
-            <div onClick={this.handleClick}>Home</div>
-        </div>;
-    }
-}
-
-Home.PropTypes = {
-    dispatch: PropTypes.func,
-    todo: PropTypes.bool,
+    return <div className="home">
+        <div className="container">
+            <div className="home__title">Home</div>
+        </div>
+    </div>;
 };
 
-export default connect((state) => ({
-    todo: state.todo
-}))(Home);
+export default Home;
